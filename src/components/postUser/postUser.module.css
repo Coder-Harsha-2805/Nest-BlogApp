@@ -1,0 +1,12 @@
+.container {
+   margin-bottom: 10px;
+ }
+ 
+ .title {
+   font-weight: bold;
+   margin-right: 10px;
+ }
+ 
+ .username {
+   color: #555;
+ }

@@ -1,0 +1,12 @@
+.footerMain{
+   background-color: var(--bg);
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.footerSub{
+   font-size: 0.8em;
+   filter: brightness(60%);
+}

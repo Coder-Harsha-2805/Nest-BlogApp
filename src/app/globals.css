@@ -1,0 +1,34 @@
+:root{
+   --bg: rgb(0, 0, 0);
+   --bgsoft: rgb(15, 15, 20);
+   --text: rgb(242, 232, 220);
+   --textsoft: rgb(213, 191, 164);
+   --btn: rgb(15, 129, 244);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background-color: var(--bg);
+   color: var(--text);
+}
+
+a{
+   text-decoration: none;
+   color: inherit;
+}
+
+.container{
+   background-color: var(--bgsoft);
+   width: 99vw;
+   margin: auto;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+}

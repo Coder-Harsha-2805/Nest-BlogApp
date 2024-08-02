@@ -1,0 +1,63 @@
+() group name
+[] for dynamic routing :id
+name1 -> page.jsx   and for routing=> localhost:1000/name1
+name2 -> page.jsx   and for routing=> localhost:1000/name2
+name3 -> page.jsx   and for routing=> localhost:1000/name3
+layout.js  {children}: represents the pages | used for something which needs to appear with every page for ex. navbar and footer
+src -> app -> just for routing pages | do not insert components inside this
+src -> components | this way you should create components to avoid confusion
+loading.jsx is special file name to use next js loader directly
+error.jsx is special file name to use next js error page directly | its client side operated
+create links -> Links.js for navbar links since Link is a nextjs feature
+if you are using a hook it needs to be a client component "use client"
+in links.jsx you want the sidemenu to open a small screen when user clicks hence it is a client component so useclient 
+cached images are shown when you click on an image from yoyr website due to nextjs
+we can by default only use images in public directory and online images are not suppaorted 
+to add online image:nextconfig.js  add images and then add remotePatterns hostname(name of website) and protocol(http or https)
+ssr->>>: request is send via url and then empty page is first shown then req is send to user browser then html file is quickly rendered on the page(but initial page in not interactive and browser has to wait to download the js interractivity)
+if you console log it will be visible in terminal not in your chrome inpect
+pros: initial page load is faster | better on old devices and slow internet connection | better SEO
+cons: less interaction | increased server loads | slower page loads | state management is tough
+csr->>>: we have to wait and see blank page until components are fully rendered|| and after the page is rendered the page is readable and fully interactive
+pros: better performance after initial load | less server load | Best for user Interactivity
+cons: affects SEO | slower on initial loads | dependency on client resources
+note: react generally uses csr but in next js we use ssr more and the pages where interactivity is required we go for csr by use client
+to prevent HYDRATION( when a ssc is made client side by using "use client" then for example if a maths function is run on a form lke generating a random number then different values are printed on console and on web server and hence error is caused ) and to resove this we use useState and useEffect || you a=can write like this <div suppressHydrationWarning>
+while working with links prefetch false removes performance issues
+router.push("/") provides client side navigation
+router.replace("/") this once clicked goes to the page / but when last window is loaded from back buttton on google then google.com appears not the page from where i navigated to / page
+router.refresh() it refreshes our current route and if you want to make new request to the server i.e is re renders the components
+router.back() to navigate to previous page 
+router.forward() to open up the next page
+const res = await fetch("https://jsonplaceholder.typicode.com/posts"); in this when go go on other page the page will remain cached so to avoid this and allow re-rendering we can write like this =>> const res = await fetch("https://jsonplaceholder.typicode.com/posts" ,{cache: "no-store"}); and to refresh data after certain fixed period of time you can const res = await fetch("https://jsonplaceholder.typicode.com/posts" ,{nex: {revalidate:3600}}); this will then refresh automatically after each hour
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+first user has atlas admin permissions:   sinhaharsha2805: sattuji05
